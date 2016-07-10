@@ -1,0 +1,46 @@
+{
+  "name": "CycleJS Todo App",
+  "version": "0.1.0",
+  "description": "A simple todo list build using cycle.js",
+  "main": "src/scripts/main.js",
+  "dependencies": {
+    "babel-loader": "^6.2.4",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.0",
+    "sasslint-loader": "0.0.1",
+    "script-loader": "^0.7.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "xstream": "^5.1.4"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "work": "node_modules/.bin/webpack-dev-server --colors",
+    "build": "node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asainz/cyclejs-todo-list.git"
+  },
+  "keywords": [
+    "cyclejs",
+    "todo list",
+    "webpack",
+    "babel",
+    "javascript",
+    "es6"
+  ],
+  "author": "Andrés Sainz de Aja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asainz/cyclejs-todo-list/issues"
+  },
+  "homepage": "https://github.com/asainz/cyclejs-todo-list#readme"
+}
