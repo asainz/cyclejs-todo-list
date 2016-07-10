@@ -1,9 +1,11 @@
 {
-  "name": "CycleJS Todo App",
+  "name": "cyclejstodo",
   "version": "0.1.0",
   "description": "A simple todo list build using cycle.js",
   "main": "src/scripts/main.js",
   "dependencies": {
+    "@cycle/dom": "^10.0.5",
+    "@cycle/xstream-run": "^3.0.3",
     "babel-loader": "^6.2.4",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
