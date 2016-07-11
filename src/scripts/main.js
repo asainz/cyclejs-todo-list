@@ -1,10 +1,21 @@
 import xs from 'xstream';
 import {run} from '@cycle/xstream-run';
-import {makeDOMDriver, div, input, p} from '@cycle/dom';
+import {makeDOMDriver, div, input, p, button} from '@cycle/dom';
 
 function main(sources){
     const sinks = {
-        DOM: sources.DOM.select('input').events('change')
+        HEADER: sources.props.map((prop) => {
+            return div('ANDRES');
+        }),
+        CONTENT: sources.props.map((prop) => {
+            return div('SAINZ DE AJA');
+        }),
+        DOM: sources.props.map((prop) => {
+                return div('.app', [
+                    button('.btn', 'Get Random User')
+                ]);
+            }),
+        DOMANDRES: sources.DOMANDRES.select('input').events('change')
             .map(ev => ev.target.checked)
             .startWith(JSON.parse(localStorage.getItem('cyclejs.todo.sample-checked')) || false)
             .map(checked => {
@@ -21,7 +32,13 @@ function main(sources){
 }
 
 const drivers = {
-    DOM: makeDOMDriver('#app')
+    props: () => xs.of({
+        appName: 'CycleJS Todo List'
+    }),
+    HEADER: makeDOMDriver('#header'),
+    CONTENT: makeDOMDriver('#content'),
+    DOM: makeDOMDriver('#app'),
+    DOMANDRES: makeDOMDriver('#appContent'),
 };
 
 run(main, drivers);
